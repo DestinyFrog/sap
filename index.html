@@ -16,12 +16,24 @@
 		</nav>
 
 		<nav class="container-menu">
-			<ul>
-				<li><a>Sobre Nós</a></li>
-				<li><a>Serviços</a></li>
-				<li><a>Contato</a></li>
-			</ul>
+			<p id="title-dropdown">Navegar
+				<ul id="menu-dropdown">
+					<li id="sobre" class=menu-item>Sobre Nós</li>
+					<li id="servicos" class="menu-item">Serviços</li>
+					<li id="contato" class="menu-item">Contato</li>
+				</ul>
+			</p>
 		</nav>
+
+		<script>
+			let isclickeddropdown = false
+	
+			document.getElementById("title-dropdown")
+			.addEventListener('click', () => {
+				document.getElementById("menu-dropdown").style.display = isclickeddropdown? 'block' : 'none'
+				isclickeddropdown = !isclickeddropdown
+			})
+		</script>
 
 		<nav class="container-menu2">
 
@@ -35,7 +47,7 @@
 	</header>
 
 	<main>
-		<div class="container sobre-nos">
+		<div id="div-sobre-nos" class="container sobre-nos">
 			<div class="content">
 				<h2>Sobre Nós</h2>
 				<p>Bem-vindo à T.M Investigação! Somos especialistas em investigações personalizadas. Trabalhamos para
@@ -43,7 +55,7 @@
 			</div>
 		</div>
 
-		<div class="container reverse tela1">
+		<div id="div-servicos" class="container reverse tela1">
 			<div class="split">
 				<div class="">
 					<h2>
@@ -99,31 +111,6 @@
 						<h4>Rodrigo Santos</h4>
 					</li>
 				</ul>
-			</div>
-		</div>
-
-		<div class="container reverse galeria-de-fotos">
-			<div class="content">
-				<p>Momentos cativantes para compartilhar a essência única da nossa jornada.</p>
-				<ul>
-					<li></li>
-					<li></li>
-				</ul>
-			</div>
-		</div>
-
-		<div class="container tela2">
-			<div class="content square">
-				<h1>Descubra a verdade com a T.M. Investigação: Atendimento personalizado e tecnologia de ponta!</h1>
-				<p>Bem-vindo à T.M Investigação, sua parceira confiável em soluções investigativas personalizadas em São
-					Paulo. Com um mês de atuação no mercado, nos destacamos pelo atendimento exclusivo e pela utilização
-					de tecnologia de ponta em cada caso que assumimos. Nosso compromisso é oferecer um serviço de
-					qualidade e eficaz, seja para investigações conjugais, localização de pessoas desaparecidas,
-					investigações empresariais ou detecção de fraudes. Na T.M Investigação, entendemos a importância e a
-					sensibilidade de cada situação, por isso garantimos total discrição e profissionalismo em todos os
-					nossos serviços. Conte conosco para obter resultados precisos e confiáveis, estamos aqui para
-					ajudá-lo a encontrar as respostas que procura. Entre em contato conosco e deixe a T.M Investigação
-					cuidar do resto.</p>
 			</div>
 		</div>
 
@@ -213,7 +200,7 @@
 			</div>
 		</div>
 
-		<div class="container reverse final">
+		<div id="div-contato" class="container reverse final">
 			<div class="content">
 				<h2>CONTATO</h2>
 				<p>t.m.investigador@gmail.com<br />11 98045-5428</p>
@@ -241,6 +228,26 @@
 		</div>
 	</footer>
 
+	<script>
+		document.body.onscroll = ev => {
+			console.log(window.scrollY)
+		}
+
+		document.getElementById('sobre').addEventListener('click', () => {
+			// document.getElementById('div-sobre-nos').scrollIntoView()
+			window.scroll(0, 0)
+		})
+
+		document.getElementById('servicos').addEventListener('click', () => {
+			document.getElementById('div-servicos').scrollIntoView()
+			window.scroll(0, window.screenY + 200)
+		})
+		
+		document.getElementById('contato').addEventListener('click', () => {
+			document.getElementById('div-contato').scrollIntoView()
+
+		})
+	</script>
 </body>
 
 </html>
