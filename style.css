@@ -72,6 +72,7 @@ header {
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
+	z-index: 10;
 }
 
 header nav {
@@ -230,4 +231,61 @@ footer {
 #menu-dropdown li:hover {
 	padding: 4px;
 	background-color: #178050;
+}
+
+.slider-container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.slider {
+	max-height: 400px;
+	width: 100%;
+	position: relative;
+	background-color: rgba(49, 49, 49, 0.164);
+	display: flex;
+	flex-direction: column-reverse;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+}
+
+.slider img {
+	width: 100%;
+	height: 60vw;
+	max-height: 500px;
+	object-fit: cover;
+}
+
+.btn-slide-left, .btn-slide-right {
+	position: absolute;
+	transform: translate(0, -50%);
+	background-color: rgba(0,0,0,0.6);
+	width: 30px;
+	height: 60px;
+	border-radius: 0;
+}
+
+.btn-slide-left {
+	left: 0;
+	top: 50%;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+.btn-slide-right {
+	right: 0;
+	top: 50%;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+@media screen and (max-width: 600px) {
+	.slider img {
+		height: 60vw;
+		max-height: 400px;
+		object-fit: contain;
+	}
 }

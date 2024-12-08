@@ -55,6 +55,48 @@
 			</div>
 		</div>
 
+		<div id="div-slider" class="slider">
+			<button id="btn-left-sl" class="btn-slide-left">&lt</button>
+			<button id="btn-right-sl" class="btn-slide-right">&gt</button>
+			<img id="img-sl">
+		</div>
+
+		<script>
+			const DELAY = 10000
+
+			document.getElementById("btn-right-sl").addEventListener('click', previousSlide)
+			document.getElementById("btn-left-sl").addEventListener('click', nextSlide)
+
+			let order = 0
+			const imgs = [
+				"slide1.jpeg",
+				"slide2.jpeg",
+				"slide3.jpeg"
+			]
+
+			function loop() {
+				nextSlide()
+				setTimeout(
+					() =>
+						requestAnimationFrame(loop)
+				, DELAY)
+			}
+
+			function previousSlide() {
+				order--
+				if (order < 0) order = imgs.length-1
+				document.getElementById("img-sl").src = imgs[order]
+			}
+
+			function nextSlide() {
+				order++
+				if (order > imgs.length-1) order = 0
+				document.getElementById("img-sl").src = imgs[order]
+			}
+
+			requestAnimationFrame(loop)
+		</script>
+
 		<div id="div-servicos" class="container reverse tela1">
 			<div class="split">
 				<div class="">
@@ -217,6 +259,7 @@
 		</a>
 	</button>
 
+	<!--
 	<footer class="cookies">
 		<div class="content">
 			<p>Nosso site utiliza cookies para te proporcionar uma melhor experiência. Ao acessar o site, você concorda
@@ -227,6 +270,7 @@
 			</button>
 		</div>
 	</footer>
+-->
 
 	<script>
 		document.body.onscroll = ev => {
