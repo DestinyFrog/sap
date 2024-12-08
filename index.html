@@ -15,7 +15,7 @@
 			<img class="logo" src="logo.png" />
 		</nav>
 
-		<nav class="container-menu">
+		<nav class="container-menu" id="dropdown">
 			<p id="title-dropdown">Navegar
 				<ul id="menu-dropdown">
 					<li id="sobre" class=menu-item>Sobre Nós</li>
@@ -27,8 +27,7 @@
 
 		<script>
 			let isclickeddropdown = false
-	
-			document.getElementById("title-dropdown")
+			document.getElementById("dropdown")
 			.addEventListener('click', () => {
 				document.getElementById("menu-dropdown").style.display = isclickeddropdown? 'block' : 'none'
 				isclickeddropdown = !isclickeddropdown
@@ -162,7 +161,7 @@
 				<p>Localizada estrategicamente em São Paulo, a T.M Investigação está pronta para atender a demanda por
 					serviços de detetive particular em uma das maiores metrópoles do Brasil. Conte com nossa equipe
 					especializada e tecnologia de ponta para resolver seus casos com discrição e eficiência.</p>
-				<img src="mapa.svg" alt="mapa">
+				<img src="mapa.svg" alt="mapa" style="max-width: 400px;">
 			</div>
 		</div>
 
@@ -258,8 +257,7 @@
 			<img src="float-whatsapp-button.png" alt="float whatsapp button" />
 		</a>
 	</button>
-
-	<!--
+	
 	<footer class="cookies">
 		<div class="content">
 			<p>Nosso site utiliza cookies para te proporcionar uma melhor experiência. Ao acessar o site, você concorda
@@ -270,7 +268,6 @@
 			</button>
 		</div>
 	</footer>
--->
 
 	<script>
 		document.body.onscroll = ev => {
@@ -284,7 +281,7 @@
 
 		document.getElementById('servicos').addEventListener('click', () => {
 			document.getElementById('div-servicos').scrollIntoView()
-			window.scroll(0, window.screenY + 200)
+			window.scroll(0, window.screenY)
 		})
 		
 		document.getElementById('contato').addEventListener('click', () => {
