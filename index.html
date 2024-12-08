@@ -15,25 +15,6 @@
 			<img class="logo" src="logo.png" />
 		</nav>
 
-		<nav class="container-menu" id="dropdown">
-			<p id="title-dropdown">Navegar
-				<ul id="menu-dropdown">
-					<li id="sobre" class=menu-item>Sobre Nós</li>
-					<li id="servicos" class="menu-item">Serviços</li>
-					<li id="contato" class="menu-item">Contato</li>
-				</ul>
-			</p>
-		</nav>
-
-		<script>
-			let isclickeddropdown = false
-			document.getElementById("dropdown")
-			.addEventListener('click', () => {
-				document.getElementById("menu-dropdown").style.display = isclickeddropdown? 'block' : 'none'
-				isclickeddropdown = !isclickeddropdown
-			})
-		</script>
-
 		<nav class="container-menu2">
 
 			<a target="_blank" href="https://api.whatsapp.com/send?phone=5511980455428">
@@ -43,6 +24,25 @@
 				</button>
 			</a>
 		</nav>
+
+		<nav class="container-menu" id="dropdown">
+			<p id="title-dropdown">Navegar
+			<ul id="menu-dropdown">
+				<li id="sobre" class=menu-item>Sobre Nós</li>
+				<li id="servicos" class="menu-item">Serviços</li>
+				<li id="contato" class="menu-item">Contato</li>
+			</ul>
+			</p>
+		</nav>
+
+		<script>
+			let isclickeddropdown = false
+			document.getElementById("dropdown")
+				.addEventListener('click', () => {
+					document.getElementById("menu-dropdown").style.display = isclickeddropdown ? 'block' : 'none'
+					isclickeddropdown = !isclickeddropdown
+				})
+		</script>
 	</header>
 
 	<main>
@@ -78,18 +78,18 @@
 				setTimeout(
 					() =>
 						requestAnimationFrame(loop)
-				, DELAY)
+					, DELAY)
 			}
 
 			function previousSlide() {
 				order--
-				if (order < 0) order = imgs.length-1
+				if (order < 0) order = imgs.length - 1
 				document.getElementById("img-sl").src = imgs[order]
 			}
 
 			function nextSlide() {
 				order++
-				if (order > imgs.length-1) order = 0
+				if (order > imgs.length - 1) order = 0
 				document.getElementById("img-sl").src = imgs[order]
 			}
 
@@ -155,6 +155,8 @@
 			</div>
 		</div>
 
+		<div class="triangulo1"></div>
+
 		<div class="container reverse tela3">
 			<div class="content">
 				<h1>Descubra os Segredos de São Paulo: Sua Investigação Começa Aqui!</h1>
@@ -165,80 +167,103 @@
 			</div>
 		</div>
 
-		<div class="container duvidas">
+		<div class="triangulo2"></div>
+
+		<div class="container">
 			<div class="content">
-				<div class="col-12 col-md-6 col-lg-6">
-					<h5>1. Como posso contratar os serviços de investigação conjugal?</h5>
-					<ul>
-						<li>Nosso processo de contratação é simples e sigiloso. Basta entrar
-							em contato conosco através do telefone ou e-mail disponíveis em
-							nosso site.</li>
-					</ul>
-					<h5>2. Qual é o prazo médio para a localização de pessoas desaparecidas?
-					</h5>
-					<ul>
-						<li>O prazo pode variar de acordo com a complexidade do caso, mas
-							estamos empenhados em realizar a localização o mais rápido
-							possível, mantendo sempre a qualidade e eficiência.</li>
-					</ul>
-					<h5>3. Como é feita a investigação empresarial pela T.M Investigação?
-					</h5>
-					<ul>
-						<li>Nossa equipe utiliza tecnologia de ponta e métodos
-							especializados para investigar questões empresariais, garantindo
-							total sigilo e profissionalismo em cada etapa do processo.</li>
-					</ul>
-					<h5>4. Quais são os tipos de fraudes que a T.M Investigação investiga?
-					</h5>
-					<ul>
-						<li>Investigamos fraudes financeiras, corporativas e diversas outras
-							situações suspeitas, sempre visando proteger os interesses de
-							nossos clientes.</li>
-					</ul>
-					<h5>5. Como posso ter certeza da discrição e confidencialidade dos
-						serviços prestados?</h5>
-					<ul>
-						<li>Nossa empresa preza pela total discrição e confidencialidade em
-							todas as investigações realizadas, garantindo a segurança e
-							privacidade de nossos clientes em primeiro lugar.</li>
-					</ul>
-					<h5>6. A T.M Investigação atende apenas na região de São Paulo?</h5>
-					<ul>
-						<li>No momento, nossa empresa está focada em atender clientes na
-							região de São Paulo, mas estamos sempre abertos a discutir
-							possíveis investigações em outras localidades.</li>
-					</ul>
-					<h5>7. Qual é a formação e experiência da equipe de detetives da T.M
-						Investigação?</h5>
-					<ul>
-						<li>Nossa equipe é composta por profissionais altamente qualificados
-							e experientes no ramo da investigação, garantindo um serviço de
-							excelência e resultados precisos para nossos clientes.</li>
-					</ul>
-					<h5>8. Como posso saber mais sobre os resultados das investigações
-						realizadas pela empresa?</h5>
-					<ul>
-						<li>Após a conclusão da investigação, fornecemos um relatório
-							detalhado e completo aos nossos clientes, apresentando os
-							resultados obtidos de forma clara e objetiva.</li>
-					</ul>
-					<h5>9. A T.M Investigação oferece algum tipo de garantia de satisfação?
-					</h5>
-					<ul>
-						<li>Estamos empenhados em superar as expectativas de nossos clientes
-							e garantir a satisfação com os resultados obtidos. Caso haja
-							alguma insatisfação, estamos abertos a discutir soluções e
-							ajustes necessários.</li>
-					</ul>
-					<h5>10. Como posso agendar uma consulta para discutir meu caso
-						específico com a equipe da T.M Investigação?</h5>
-					<ul>
-						<li>Para agendar uma consulta e discutir seu caso específico, entre
-							em contato conosco através dos canais disponíveis em nosso site
-							e agendaremos um horário que seja conveniente para você.</li>
-					</ul>
+				<h2>Dúvidas Frequentes</h2>
+				<ol class="duvidas">
+					<li>
+						<h5>Como posso contratar os serviços de investigação conjugal?</h5>
+						<ul>
+							<li>Nosso processo de contratação é simples e sigiloso. Basta entrar
+								em contato conosco através do telefone ou e-mail disponíveis em
+								nosso site.</li>
+						</ul>
+					</li>
+					<li>
+						<h5>Qual é o prazo médio para a localização de pessoas desaparecidas?
+						</h5>
+						<ul>
+							<li>O prazo pode variar de acordo com a complexidade do caso, mas
+								estamos empenhados em realizar a localização o mais rápido
+								possível, mantendo sempre a qualidade e eficiência.</li>
+						</ul>
+					</li>
+					<li>
+						<h5>Como é feita a investigação empresarial pela T.M Investigação?
+						</h5>
+						<ul>
+							<li>Nossa equipe utiliza tecnologia de ponta e métodos
+								especializados para investigar questões empresariais, garantindo
+								total sigilo e profissionalismo em cada etapa do processo.</li>
+						</ul>
+					</li>
+					<li>
+						<h5>Quais são os tipos de fraudes que a T.M Investigação investiga?
+						</h5>
+						<ul>
+							<li>Investigamos fraudes financeiras, corporativas e diversas outras
+								situações suspeitas, sempre visando proteger os interesses de
+								nossos clientes.</li>
+						</ul>
+					</li>
+					<li>
+						<h5>Como posso ter certeza da discrição e confidencialidade dos
+							serviços prestados?</h5>
+						<ul>
+							<li>Nossa empresa preza pela total discrição e confidencialidade em
+								todas as investigações realizadas, garantindo a segurança e
+								privacidade de nossos clientes em primeiro lugar.</li>
+						</ul>
+					</li>
+					<li>
+						<h5>A T.M Investigação atende apenas na região de São Paulo?</h5>
+						<ul>
+							<li>No momento, nossa empresa está focada em atender clientes na
+								região de São Paulo, mas estamos sempre abertos a discutir
+								possíveis investigações em outras localidades.</li>
+						</ul>
+					</li>
+					<li>
+						<h5>Qual é a formação e experiência da equipe de detetives da T.M
+							Investigação?</h5>
+						<ul>
+							<li>Nossa equipe é composta por profissionais altamente qualificados
+								e experientes no ramo da investigação, garantindo um serviço de
+								excelência e resultados precisos para nossos clientes.</li>
+						</ul>
+					</li>
+					<li>
+						<h5>Como posso saber mais sobre os resultados das investigações
+							realizadas pela empresa?</h5>
+						<ul>
+							<li>Após a conclusão da investigação, fornecemos um relatório
+								detalhado e completo aos nossos clientes, apresentando os
+								resultados obtidos de forma clara e objetiva.</li>
+						</ul>
+					</li>
+					<li>
+						<h5>A T.M Investigação oferece algum tipo de garantia de satisfação?
+						</h5>
+						<ul>
+							<li>Estamos empenhados em superar as expectativas de nossos clientes
+								e garantir a satisfação com os resultados obtidos. Caso haja
+								alguma insatisfação, estamos abertos a discutir soluções e
+								ajustes necessários.</li>
+						</ul>
+					</li>
+					<li>
+						<h5>Como posso agendar uma consulta para discutir meu caso
+							específico com a equipe da T.M Investigação?</h5>
+						<ul>
+							<li>Para agendar uma consulta e discutir seu caso específico, entre
+								em contato conosco através dos canais disponíveis em nosso site
+								e agendaremos um horário que seja conveniente para você.</li>
+						</ul>
+					</li>
+				</ol>
 				</div>
-			</div>
 		</div>
 
 		<div id="div-contato" class="container reverse final">
@@ -257,7 +282,7 @@
 			<img src="float-whatsapp-button.png" alt="float whatsapp button" />
 		</a>
 	</button>
-	
+
 	<footer class="cookies">
 		<div class="content">
 			<p>Nosso site utiliza cookies para te proporcionar uma melhor experiência. Ao acessar o site, você concorda
@@ -270,20 +295,15 @@
 	</footer>
 
 	<script>
-		document.body.onscroll = ev => {
-			console.log(window.scrollY)
-		}
-
 		document.getElementById('sobre').addEventListener('click', () => {
-			// document.getElementById('div-sobre-nos').scrollIntoView()
 			window.scroll(0, 0)
 		})
 
 		document.getElementById('servicos').addEventListener('click', () => {
 			document.getElementById('div-servicos').scrollIntoView()
-			window.scroll(0, window.screenY)
+			window.scroll(0, window.scrollY - 50)
 		})
-		
+
 		document.getElementById('contato').addEventListener('click', () => {
 			document.getElementById('div-contato').scrollIntoView()
 
