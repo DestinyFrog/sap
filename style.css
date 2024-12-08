@@ -12,6 +12,7 @@ body {
 	width: 100vw;
 	overflow-x: hidden;
 	background-color: #f8f9fa;
+	overflow-x: hidden;
 }
 
 ul {
