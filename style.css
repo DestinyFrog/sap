@@ -346,3 +346,8 @@ footer {
 		max-width: 400px;
 	}
 }
+
+label {
+	padding-top: 20px;
+	font-size: 14px;
+}
