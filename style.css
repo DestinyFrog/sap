@@ -216,7 +216,7 @@ footer {
 	left: 0;
 	height: 100%;
 	text-align: center;
-	width: 140px;
+	width: 100px;
 	/* margin-right: 10px; */
 	background-color: rgb(72, 72, 72);
 	padding: 4px;
@@ -236,7 +236,7 @@ footer {
 }
 
 #menu-dropdown li {
-	width: 140px;
+	width: 100px;
 	padding: 4px;
 	border-bottom: 2px solid red;
 	color: white;
