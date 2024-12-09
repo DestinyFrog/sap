@@ -268,7 +268,7 @@ footer {
 
 .slider img {
 	width: 100%;
-	height: auto;
+	height: 100%;
 	background-color: black;
 	/* height: 100%; */
 	/* max-height: 500px; */
